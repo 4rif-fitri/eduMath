@@ -1,8 +1,3 @@
-#wrapper>section {
-	padding: 1rem;
-	background-color: lightgrey;
-	overflow-y: auto;
-}
 
 .box-container {
 	display: flex;
