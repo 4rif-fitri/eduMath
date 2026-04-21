@@ -1,0 +1,169 @@
+section {
+	width: 100%;
+}
+
+.content {
+	margin: 0 auto;
+	padding: 1rem;
+	width: 35rem;
+	background-color: #ececec;
+	position: relative;
+}
+
+.moniter {
+	width: 100%;
+	margin: 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	place-items: center;
+	text-align: center;
+	background-color: #fff;
+}
+
+.moniter>article {
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	padding: 0.5rem;
+	border: 1px solid black;
+}
+
+.guide {
+	margin: 2rem 0;
+	text-align: center;
+}
+
+.board {
+	margin: 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.board>.box {
+	background-color: #e4e4e4;
+	aspect-ratio: 1 / 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.board .ans {
+	border: 2px dashed black;
+}
+
+.choices {
+	margin: 2rem 0;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.choices button {
+	padding: 1rem;
+}
+
+.btn-container {
+	margin: 2rem 0 0 0;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.btn-container button {
+	padding: 0.5rem;
+}
+
+#bar {
+	width: 100%;
+	height: 0.5rem;
+	background-color: rgb(0, 119, 255);
+	border-radius: 15px;
+	/* opacity:0; */
+	/* animation: bar 0.5s  ; */
+}
+
+@keyframes bar {
+	0% {
+		width: 100%;
+	}
+
+	100% {
+		width: 0%;
+	}
+}
+
+.popup {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	padding: 0.5rem;
+
+	visibility: hidden;
+}
+
+.popup>h3 {
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.grid-4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	place-items: center;
+	text-align: center;
+}
+
+.result-box>article {
+	padding: 1rem;
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+	text-align: center;
+}
+.grid-4 > article, .grid-3 > article{
+	padding: 1rem;
+}
+
+.img {
+	position: relative;
+	border: 2px solid black;
+	margin: 0.5rem;
+	height: 300px;
+	margin: 0 5rem;
+}
+.text {
+	white-space: nowrap;
+	border: 2px solid black;
+	padding: 0.5rem 2em;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%);
+}
+.overall {
+	border-radius: 14px;
+	padding: 0.5rem 0;
+	text-align: center;
+	width: 100%;
+}
+.btn-home {
+	display: inline-block;
+	border: 2px solid lightslategrey;
+	border-radius: 14px;
+	padding: 0.5rem 0;
+	text-align: center;
+	background-color: lightgray;
+	margin: 0.5rem 0;
+	width: 100%;
+}
+@media screen and (max-width: 700px) {
+	.content {
+		width: 100%;
+	}
+}
