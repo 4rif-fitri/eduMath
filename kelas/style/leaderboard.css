@@ -1,0 +1,47 @@
+section {
+	width: 100%;
+}
+section > h3{
+	text-align: center;
+}
+.table-container {
+	margin: 0 auto;
+	padding: 1rem;
+	width: 50rem;
+}
+
+table {
+	border: 3px solid black;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 4px 4px 0 0;
+	text-align: center;
+	border-spacing: 0;
+	padding: 1rem 0;
+	margin: 1rem 0;
+}
+
+table tr td{
+	padding: 0.2rem;
+}
+
+.img {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.img>img {
+	height: 2.5rem;
+}
+
+.your {
+	background-color: rgb(216, 216, 216);
+}
+
+@media screen and (max-width: 900px) {
+	.table-container {
+		width: 100%;
+	}
+}
