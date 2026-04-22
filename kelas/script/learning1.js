@@ -117,6 +117,7 @@ let nextStep = () => {
 			dialogText.textContent = "Itu sahaja Bye"
 			break
 		case 17:
+			window.location.href = "./index.html";
 
 	}
 
