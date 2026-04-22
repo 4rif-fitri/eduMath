@@ -1,0 +1,15 @@
+section {
+	width: 100%;
+}
+.content {
+	height: 100%;margin: 0 auto;
+	padding: 1rem;
+	width: 35rem;
+	background-color: #ececec;
+}
+
+@media screen and (max-width: 700px) {
+	.content {
+		width: 100%;
+	}
+}
