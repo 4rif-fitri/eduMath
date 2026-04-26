@@ -1,202 +1,127 @@
-section {
-	width: 100%;
-}
+		section{
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: lightblue;
+			font-size: 2rem;
+			position: relative;
+			user-select: none;
+			position: relative;
+		}
 
-.content {
-	overflow: hidden;
-		height: 100%;
-		margin: 0 auto;
-		padding: 1rem;
-		width: 35rem;
-		background-color: #ececec;
-		position: relative;
-}
+		.container {
+			background-color: #fff;
+			padding: 0.5rem;
+			display: grid;
+			grid-template-columns: auto 1fr;
+			gap: 3rem;
+		}
 
-.content>.char {
-	position: absolute;
-	top: 60%;
-	left: 25%;
-	translate: -50% -50%;
-	scale: 10;
-	z-index: 1;
-}
+		.jawapan {
+			display: grid;
+			place-items: center;
+		}
 
-.lantai {
-	position: absolute;
-	top: 65%;
-	left: 50%;
-	scale: 6;
-}
+		.numbers {
+			display: grid;
+			grid-template-columns: 2fr 2fr 1fr;
+			gap: 0.5rem;
+		}
 
-.board {
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	translate: -50% 0;
-	height: calc(16px * 8);
-	width: calc(48px * 8);
-	z-index: 1;
-}
+		.numbers:nth-child(4),
+		.numbers:nth-child(5) {
+			margin-top: 0.5rem;
+		}
 
-.board img {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
+		.number {
+			background-color: #e7e7e7;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
 
-.board>.text {
-	position: relative;
-	height: 100%;
-	width: 100%;
-}
+		.simbol {
+			position: absolute;
+			z-index: 10;
+			right: 0;
+			height: 50%;
+			aspect-ratio: 1 / 1;
+			font-size: 3rem;
+			transform: translateX(50%);
+			background-color: #f1f1f1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-.board>.text>.row {
-	position: absolute;
-	z-index: 5;
-	width: 100%;
-	height: 100%;
-}
+		.number:nth-child(1),
+		.number:nth-child(2) {
+			width: 100%;
+		}
 
-.board3>.text>.row {
-	height: 100%;
-	width: 100%;
-	padding: 0.5rem;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	place-items: center;
-}
+		.gambar-group {
+			margin: 0.5rem 0;
+			display: grid;
+			grid-template-columns: 2fr 2fr 1fr;
+			gap: 0.5rem;
+		}
 
-.board2>.text>.row {
-	height: 100%;
-	width: 100%;
-	padding: 0.5rem;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	place-items: center;
-}
+		.left,
+		.right {
+			background-color: #e7e7e7;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			gap: 0.1rem;
 
-.board2>.text>.row>span {
-	height: 4rem;
-	aspect-ratio: 1 / 1;
-	background-color: lightgoldenrodyellow;
-	border: 3px dashed black;
-}
+			background-color: #e45c0d3a !important;
+			outline: 2px dashed #e42d0d;
+		}
 
-.board>.text>.row>.roww {
-	height: 100%;
-	width: 100%;
-	padding: 0.5rem;
-	display: grid;
-	grid-template-columns: 2fr 1fr 2fr;
-	grid-template-rows: repeat(1, 1fr);
-	place-items: center;
-}
+		.img {
+			aspect-ratio: 1 / 1;
+			background-image: url("../imgs/apple.png");
+			background-size: contain;
+		}
 
-.board>.text>.row>.roww>* {
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-}
+		.IMG {
+			width: calc(40px * 2);
+			aspect-ratio: 1 / 1;
+			background-image: url("../imgs/apple.png");
+			background-size: contain;
+			position: absolute;
+			opacity: 0;
+			pointer-events: none;
+			animation: 0.5s gayang linear infinite alternate;
+			z-index: 10;
+		}
 
-.box {
-	width: 100%;
-	height: 100%;
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	place-items: center;
-}
+		.highlight {
+			background-color: #d1ffd1 !important;
+			outline: 2px dashed #4CAF50;
+		}
 
-.boxapple {
-	width: 100%;
-	height: 110%;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-}
+		.dialog {
+			padding: 1rem;
+			background-color: rgba(222, 236, 14, 0.575);
+			outline: 2px rgb(170, 170, 21) dashed;
+			margin: 0.5rem;
+		}
 
-.apple {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url("../imgs/apple.png");
-	transition: all 0.2s ease-in-out;
-}
+		@keyframes gayang {
 
+			0%,
+			50% {
+				transform: rotateZ(-20deg);
+				scale: 1;
+			}
 
-.dialog {
-	padding: 0.5rem;
-	position: absolute;
-	top: 42%;
-	left: 25%;
-	height: calc(20px * 6);
-	width: calc(48px * 6);
-	z-index: 1;
-}
-
-.dialog>.text>img {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
-
-.dialog>.text {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.dialog>.text>h4 {
-	position: absolute;
-	top: 40%;
-	transform: translateY(-50%);
-	text-align: center;
-}
-
-.btn-next {
-	all: unset;
-	position: absolute;
-	bottom: 30px;
-	right: 30px;
-	padding: 1rem 2rem;
-	background-color: yellow;
-}
-
-.hidden {
-	visibility: hidden !important;
-}
-
-.yellow {
-	background-color: yellow;
-}
-
-@media screen and (max-width: 600px) {
-	body {
-		font-size: 15px;
-	}
-
-	.lantai {
-		scale: 5;
-	}
-
-	.content>.char {
-		scale: 8;
-		top: 70%;
-	}
-
-	.dialog {
-		width: 70%;
-	}
-
-	.board,
-	.board2,
-	.board3 {
-		width: 100%;
-	}
-
-	.content {
-		width: 100%;
-	}
-}
+			50% {
+				transform: rotateZ(10deg);
+				scale: 1.2;
+			}
+		}
