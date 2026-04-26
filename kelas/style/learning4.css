@@ -11,6 +11,34 @@ section {
 	width: 35rem;
 	background-color: #ececec;
 	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 2rem;
+}
+
+.numbers {
+	height: 100px;
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 0.5rem;
+	padding: 0.5rem;
+}
+.numbers:nth-child(2){
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.number {
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	background-color: #e2e2e2;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -21,5 +49,9 @@ section {
 
 	.content {
 		width: 100%;
+	}
+
+	.numbers {
+		height: 70px;
 	}
 }
