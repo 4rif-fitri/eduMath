@@ -1,11 +1,12 @@
 section {
 	width: 100%;
+	padding: 0 !important;
 }
 
 .content {
 	overflow: hidden;
 	height: 100%;
-	margin: 0 auto;
+	margin: 1rem auto;
 	padding: 1rem;
 	width: 35rem;
 	background-color: #ececec;
