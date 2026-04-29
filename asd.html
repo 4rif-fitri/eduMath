@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar Tambah (Beginner)</title>
+	<style>
+		body {
+			font-family: Arial;
+			text-align: center;
+			background: #eef;
+		}
+
+		.box {
+			background: white;
+			padding: 20px;
+			margin: 50px auto;
+			width: 350px;
+			border-radius: 10px;
+		}
+
+		button {
+			padding: 10px;
+			margin: 5px;
+		}
+
+		.step {
+			margin-top: 15px;
+			font-size: 18px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="box">
+		<h2 id="question"></h2>
+		<p id="instruction"></p>
+
+		<div id="choices"></div>
+
+		<div class="step" id="step"></div>
+		<div class="step" id="final"></div>
+	</div>
+
+	<script>
+		let a, b, need;
+
+		function newQuestion() {
+			document.getElementById("step").innerText = "";
+			document.getElementById("final").innerText = "";
+
+			a = Math.floor(Math.random() * 9) + 1;   // 1–9
+			b = Math.floor(Math.random() * 9) + 1;
+
+			// pastikan sesuai teknik (contoh kecil)
+			if (a + b <= 10) {
+				newQuestion();
+				return;
+			}
+
+			need = 10 - a;
+
+			document.getElementById("question").innerText = `${a} + ${b}`;
+			document.getElementById("instruction").innerText =
+				`${a} perlukan berapa untuk jadi 10?`;
+
+			let choices = [need, need + 1, need - 1];
+			choices = [...new Set(choices.filter(x => x > 0))];
+
+			let html = "";
+			choices.forEach(c => {
+				html += `<button onclick="checkStep(${c})">${c}</button>`;
+			});
+
+			document.getElementById("choices").innerHTML = html;
+		}
+
+		function checkStep(ans) {
+			if (ans === need) {
+				document.getElementById("step").innerText =
+					`Betul! ${b} dipecahkan kepada ${need} + ${b - need}`;
+
+				let total = 10 + (b - need);
+
+				document.getElementById("final").innerText =
+					`Jadi: ${a} + ${need} = 10, 10 + ${b - need} = ${total}`;
+
+				setTimeout(newQuestion, 3000);
+			} else {
+				document.getElementById("step").innerText = "Cuba lagi!";
+			}
+		}
+
+		newQuestion();
+	</script>
+
+</body>
+
+</html>

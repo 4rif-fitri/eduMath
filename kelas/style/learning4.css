@@ -4,8 +4,8 @@ section {
 }
 
 .content {
-	overflow: hidden;
-	height: 100%;
+	/* overflow: hidden; */
+	/* height: 100%; */
 	margin: 1rem auto;
 	padding: 1rem;
 	width: 35rem;
@@ -16,7 +16,7 @@ section {
 	align-items: center;
 	justify-content: center;
 
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .container {
@@ -33,10 +33,7 @@ section {
 	grid-template-columns: repeat(5, 1fr);
 	gap: 0.5rem;
 	width: 100%;
-}
-
-.numbers:nth-child(2) {
-	grid-template-columns: repeat(5, 1fr);
+	position: relative;
 }
 
 .number {
@@ -48,8 +45,20 @@ section {
 	justify-content: center;
 	position: relative;
 }
-
+.s1{
+	grid-template-columns: repeat(3, 1fr);
+}
 .pecah {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	translate: -50% -50%;
+	z-index: 20;
+	rotate: 45deg;
+}
+.pecahh {
 	position: absolute;
 	top: 80%;
 	left: 50%;
@@ -67,9 +76,17 @@ section {
 	width: 75px;
 	height: 75px;
 	border-left: 5px solid black;
+	/* border-top: 5px solid black; */
+}
+.pecahh::after {
+	content: "";
+	/* top: 100px; */
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	border-left: 5px solid black;
 	border-top: 5px solid black;
 }
-
 .wrapper {
 	position: absolute;
 }
@@ -99,7 +116,7 @@ section {
 }
 
 .action {
-	height: 100px;
+	height: 100px !important;
 	width: 100%;
 	background-color: #fff;
 	position: relative;
@@ -107,11 +124,10 @@ section {
 
 .red {
 	transform-origin: top left;
-	rotate: 32deg;
-	top: 26%;
+	rotate: 35deg;
 	left: 10%;
 	position: absolute;
-	width: 270px;
+	width: 250px;
 	height: 80px;
 	outline: 3px dashed lightcoral;
 	z-index: 30;
@@ -133,10 +149,62 @@ section {
 	text-align: center;
 	outline: 2px dashed green;
 	border-radius: 14px;
-	margin-bottom: 1rem;
 	font-size: 18px;
 }
 
+.hidden{
+	display: none !important;
+}
+
+.yellow{
+	background-color: lightgoldenrodyellow;
+	outline: 2px dashed rgb(200, 200, 47);
+}
+.hijau{
+	background-color: lightgreen;
+		outline: 2px dashed rgb(6, 181, 12);
+}
+.q1,.q2{
+	grid-template-columns: repeat(4, 1fr);
+}
+.low-opacity {
+	opacity: 0.5;
+}
+.step1{
+	/* background-color: lightgoldenrodyellow; */
+	padding: 0.5rem;
+	display: grid;
+	grid-template-rows: repeat(4,auto);
+	gap: 0.5rem;
+}
+.step2 {
+	/* background-color:lightblue; */
+	padding: 0.5rem;
+	display: grid;
+	grid-template-rows: repeat(4, auto);
+	gap: 0.5rem;
+}
+.step3 {
+	/* background-color: lightcoral; */
+	padding: 0.5rem;
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	gap: 0.5rem;
+}
+.step4{
+	/* background-color: lightskyblue; */
+		padding: 0.5rem;
+		display: grid;
+		grid-template-rows: repeat(2, auto);
+		gap: 0.5rem;
+}
+.step5 {
+	/* background-color: lightpink; */
+	padding: 0.5rem;
+	display: grid;
+	grid-template-rows: repeat(2, auto);
+	gap: 0.5rem;
+}
 @media screen and (max-width: 600px) {
 	body {
 		font-size: 15px;
